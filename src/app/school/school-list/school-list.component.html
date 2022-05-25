@@ -1,12 +1,26 @@
-<p>school-list works!</p>
-<ul>
-  <li>
-    <a class="dropdown-item" [routerLink]="['/school/library']">Library</a>
-  </li>
-  <li>
-    <a class="dropdown-item" [routerLink]="['/school/student']">Students</a>
-  </li>
-  <li>
-    <a class="dropdown-item" [routerLink]="['/school/teacher']">Teachers</a>
-  </li>
-</ul>
+<div>
+  <table class="table table-stripped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let school of schools">
+        <td>{{ school.id }}</td>
+        <td>
+          <a class="link-success" [routerLink]="['/school/', school.id]">{{
+            school.name
+          }}</a>
+        </td>
+        <td>{{ school.address }}</td>
+        <td>
+          <bi name="trash" class="icon-danger"></bi>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

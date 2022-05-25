@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'schools', redirectTo: 'school/list', pathMatch: 'full' },
   { path: 'school/list', component: SchoolListComponent },
+  { path: 'school/:id', component: SchoolListComponent },
   { path: 'school/student', component: StudentComponent },
   { path: 'school/teacher', component: TeacherComponent },
   { path: 'school/library', component: LibraryComponent },

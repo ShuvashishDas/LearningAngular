@@ -2,3 +2,21 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.icon-danger {
+  color: red;
+  height: 20px;
+  width: 20px
+}
+
+.icon-success {
+  color: green;
+  height: 20px;
+  width: 20px
+}
+
+.icon-info {
+  color: yellow;
+  height: 20px;
+  width: 20px
+}
