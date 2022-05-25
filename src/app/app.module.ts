@@ -8,6 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { BootstrapIconsModule } from 'ng-bootstrap-icons';
 import { allIcons } from 'ng-bootstrap-icons/icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, AdminComponent, HomeComponent],
@@ -17,6 +18,7 @@ import { allIcons } from 'ng-bootstrap-icons/icons';
     NgbModule,
     SchoolModule,
     BootstrapIconsModule.pick(allIcons),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

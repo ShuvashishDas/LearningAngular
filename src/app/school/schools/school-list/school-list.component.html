@@ -1,0 +1,36 @@
+<div>
+  <table class="table table-stripped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let school of schools">
+        <td>{{ school.id }}</td>
+        <td>
+          <a
+            class="link-success"
+            [routerLink]="['/school/dashboard', school.id]"
+            >{{ school.name }}</a
+          >
+        </td>
+        <td>{{ school.address }}</td>
+        <td>
+          <bi (click)="deleteSchool(school.id)" name="trash" class="danger">
+          </bi>
+          &nbsp;&nbsp;
+          <bi
+            [routerLink]="['/school/', school.id]"
+            name="pencil-square"
+            class="success"
+          >
+          </bi>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
